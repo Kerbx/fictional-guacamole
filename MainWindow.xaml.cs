@@ -27,76 +27,89 @@ namespace kurwa1
         {
             InitializeComponent();
 
-            DataTable dtUser = ConnectToDatabase("SELECT * FROM [dbo].[users];");
+            // DataTable dtUser = ConnectToDatabase("SELECT * FROM [dbo].[users];");
             
         }
-        private DataTable ConnectToDatabase(string selectSQL)
+
+
+        private void CloseB_Click(object sender, MouseButtonEventArgs e)
         {
-            DataTable dataTable = new DataTable("dataBase");
-            
-            try
-            {
-
-
-                SqlConnection sqlConnection = new SqlConnection("server=СЕМЬЯ-ПК;Trusted_Connection=Yes;DataBase=usersDatabase;");
-                sqlConnection.Open();
-
-                SqlCommand sqlCommand = sqlConnection.CreateCommand();
-                sqlCommand.CommandText = selectSQL;
-
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-                sqlDataAdapter.Fill(dataTable);
-
-                return dataTable;
-
-            } catch(Exception exception)
-            {
-                MessageBox.Show("Ошибка подключения к базе данных.");
-                return dataTable;
-            };
-
+            this.Close();
         }
 
-        private bool IsUserExists(DataTable dataTable, string username, string password)
+        private void MinusB_Click(object sender, MouseButtonEventArgs e)
         {
-            for(int i = 0; i < dataTable.Rows.Count; i++)
-            {
-                if(username == (string)dataTable.Rows[i][0])
-                {
-                    if(password == (string)dataTable.Rows[i][0])
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Неправильный пароль.");
-                        return false;
-                    }
-                }
-                else if (i < dataTable.Rows.Count){
-                    continue;
-                }
-                else
-                {
-                    MessageBox.Show("Такого пользователя не существует.");
-                    return false;
-                }
-            }
-
-            return false;
+            this.WindowState = WindowState.Minimized;
         }
+        /*
+private DataTable ConnectToDatabase(string selectSQL)
+{
+DataTable dataTable = new DataTable("dataBase");
 
-        private void Check(object sender, EventArgs e)
-        {
-            string username = textboxUsername.Text;
-            string password = textboxPassword.Text;
-            DataTable dtUser = ConnectToDatabase("SELECT * FROM [dbo].[users];");
+try
+{
 
-            if(IsUserExists(dtUser, username, password))
-            {
-                MessageBox.Show("URAAAA");
-            }
-        }
+
+SqlConnection sqlConnection = new SqlConnection("server=СЕМЬЯ-ПК;Trusted_Connection=Yes;DataBase=usersDatabase;");
+sqlConnection.Open();
+
+SqlCommand sqlCommand = sqlConnection.CreateCommand();
+sqlCommand.CommandText = selectSQL;
+
+SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+sqlDataAdapter.Fill(dataTable);
+
+return dataTable;
+
+} catch(Exception exception)
+{
+MessageBox.Show("Ошибка подключения к базе данных.");
+return dataTable;
+};
+
+}
+
+private bool IsUserExists(DataTable dataTable, string username, string password)
+{
+for(int i = 0; i < dataTable.Rows.Count; i++)
+{
+if(username == (string)dataTable.Rows[i][0])
+{
+if(password == (string)dataTable.Rows[i][0])
+{
+return true;
+}
+else
+{
+MessageBox.Show("Неправильный пароль.");
+return false;
+}
+}
+else if (i < dataTable.Rows.Count){
+continue;
+}
+else
+{
+MessageBox.Show("Такого пользователя не существует.");
+return false;
+}
+}
+
+return false;
+}
+
+private void Check(object sender, EventArgs e)
+{
+string username = textboxUsername.Text;
+string password = textboxPassword.Text;
+DataTable dtUser = ConnectToDatabase("SELECT * FROM [dbo].[users];");
+
+if(IsUserExists(dtUser, username, password))
+{
+MessageBox.Show("URAAAA");
+}
+}
+*/
     }
 
 }

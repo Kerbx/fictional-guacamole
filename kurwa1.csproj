@@ -94,5 +94,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Source\Close_Active.png" />
+    <Resource Include="Source\Close_Passive.png" />
+    <Resource Include="Source\Minus_Active.png" />
+    <Resource Include="Source\Minus_Passive.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

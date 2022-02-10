@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\
+C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Release\
 kurwa1
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\App.xaml
 11151548125
 
@@ -16,5 +16,5 @@ C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\App.xaml
 13-1505183044
 MainWindow.xaml;
 
-False
+True
 

@@ -8,9 +8,39 @@
         Title="MainWindow" Height="450" Width="800" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="75"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackPanel HorizontalAlignment="Right">
+                <Image Name="MinusB" Width="50" Height="25" Margin="0 12.5 85 0" MouseDown="MinusB_Click">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="Source/Minus_Passive.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=MinusB}" Value="True">
+                                    <Setter Property="Source" Value="Source/Minus_Active.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right">
+                <Image Name="CloseB" Width="50" Height="50" Margin="0 0 10 0" MouseDown="CloseB_Click">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="Source/Close_Passive.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseB}" Value="True">
+                                    <Setter Property="Source" Value="Source/Close_Active.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
