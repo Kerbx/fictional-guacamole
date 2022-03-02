@@ -98,17 +98,17 @@ namespace kurwa1
 
             return false;
         }
-        /*
-        private void Check(object sender, EventArgs e)
+
+        private void SumbitButton_Click(object sender, RoutedEventArgs e)
         {
             string username = textboxUsername.Text;
             string password = textboxPassword.Text;
             DataTable dtUser = ConnectToDatabase("SELECT * FROM [dbo].[users];");
 
-            if(IsUserExists(dtUser, username, password))
+            if (IsUserExists(dtUser, username, password))
             {
                 MessageBox.Show("URAAAA");
             }
-        }*/
+        }
     }
 }

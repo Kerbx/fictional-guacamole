@@ -43,5 +43,22 @@
                 </Image>
             </StackPanel>
         </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel HorizontalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" Margin="0 15">
+                    <TextBlock Text="Логин:"/>
+                    <TextBox Name="textboxUsername" Width="350" Height="35"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 20">
+                    <TextBlock Text="Пароль:"/>
+                    <TextBox Name="textboxPassword" Width="350" Height="35"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel HorizontalAlignment="Center" Margin="0 25">
+                <Button Name="SumbitButton" Click="SumbitButton_Click" Content="Войти" Width="100" Height="35"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
