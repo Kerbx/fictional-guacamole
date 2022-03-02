@@ -71,29 +71,28 @@ namespace kurwa1
 
         private bool IsUserExists(DataTable dataTable, string username, string password)
         {
-            for (int i = 0; i < dataTable.Rows.Count; i++)
+            if (dataTable.Rows.Contains(username))
             {
-                if (username == (string)dataTable.Rows[i][0])
+                for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
-                    if (password == (string)dataTable.Rows[i][0])
+                    if (username == (string)dataTable.Rows[i][0])
                     {
-                        return true;
+                        if (password == (string)dataTable.Rows[i][0])
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Неправильный пароль.");
+                            return false;
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Неправильный пароль.");
-                        return false;
-                    }
                 }
-                else if (i < dataTable.Rows.Count)
-                {
-                    continue;
-                }
-                else
-                {
-                    MessageBox.Show("Такого пользователя не существует.");
-                    return false;
-                }
+            }
+            else
+            {
+                MessageBox.Show("Такого пользователя не существует.");
+                return false;
             }
 
             return false;
@@ -104,7 +103,8 @@ namespace kurwa1
             string username = textboxUsername.Text;
             string password = textboxPassword.Text;
             DataTable dtUser = ConnectToDatabase("SELECT * FROM [dbo].[users];");
-
+            DataColumn primaryColumn = dtUser.Columns[0];
+            dtUser.PrimaryKey = new DataColumn[] { primaryColumn };
             if (IsUserExists(dtUser, username, password))
             {
                 MessageBox.Show("URAAAA");
