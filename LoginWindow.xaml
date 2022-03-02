@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kurwa1"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="300" Width="300" WindowStyle="None">
+        Title="LoginWindow" Height="300" Width="300" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -14,7 +14,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Background="Transparent" MouseDown="Grid_MouseDown" Grid.Row="0">
             <StackPanel HorizontalAlignment="Right">
                 <Image Name="MinusB" Width="50" Height="25" Margin="0 12.5 85 0" MouseDown="MinusB_Click">
                     <Image.Style>

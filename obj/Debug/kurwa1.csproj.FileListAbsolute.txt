@@ -30,3 +30,7 @@ C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\kurwa1.csproj.Gen
 C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\kurwa1.csproj.CoreCompileInputs.cache
 C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\LoginWindow.g.cs
 C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\LoginWindow.baml
+C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\SingInWindow.g.cs
+C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\SingUpWindow.g.cs
+C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\SingInWindow.baml
+C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\SingUpWindow.baml

@@ -36,7 +36,14 @@ namespace kurwa1
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.ShowDialog();
         }
-        
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
         private void CloseB_Click(object sender, MouseButtonEventArgs e)
         {
             this.Close();

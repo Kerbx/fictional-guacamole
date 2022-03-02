@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace kurwa1
 {
@@ -31,6 +33,14 @@ namespace kurwa1
         private void MinusB_Click(object sender, MouseButtonEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }
