@@ -15,15 +15,14 @@ using System.Windows.Shapes;
 namespace kurwa1
 {
     /// <summary>
-    /// Логика взаимодействия для LoginWindow.xaml
+    /// Логика взаимодействия для SingInWindow.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class SingInWindow : Window
     {
-        public LoginWindow()
+        public SingInWindow()
         {
             InitializeComponent();
         }
-
         private void CloseB_Click(object sender, MouseButtonEventArgs e)
         {
             this.Close();
@@ -32,18 +31,6 @@ namespace kurwa1
         private void MinusB_Click(object sender, MouseButtonEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
-        }
-
-        private void singUpButton(object sender, RoutedEventArgs e)
-        {
-            SingUpWindow singUpWindow = new SingUpWindow();
-            singUpWindow.ShowDialog();
-        }
-
-        private void singInButton(object sender, RoutedEventArgs e)
-        {
-            SingInWindow singInWindow = new SingInWindow();
-            singInWindow.ShowDialog();
         }
     }
 }
