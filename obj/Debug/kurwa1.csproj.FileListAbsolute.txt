@@ -28,3 +28,5 @@ C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\kurwa1.g.resource
 C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\kurwa1.Properties.Resources.resources
 C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\kurwa1.csproj.GenerateResource.cache
 C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\kurwa1.csproj.CoreCompileInputs.cache
+C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\LoginWindow.g.cs
+C:\Users\Luk\source\repos\kurwa1\fictional-guacamole\obj\Debug\LoginWindow.baml
